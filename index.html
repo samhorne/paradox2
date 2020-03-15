@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<style>
+body {background-color: #17202A;}
+h1   {color: white;}
+h1.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:8vw;
+}
+p    {color: #d7e466;}
+p.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:5vw;
+}
+img {
+  width: 60%;
+  height: auto;
+}
+
+input[type=text], select {
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  text-align: center;
+  font-size: 3vw;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  font-size: 4vw;
+  display: block;
+  background-color: black;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 6px;
+ }
+</style>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "3470") {
+    document.forms["myForm"]["fname"].value = "";
+    alert("You found the first clue, but you can't stop yet. Keep on looking for more. The second clue can surely be found at the town's only grocery store. What is the price of a bag of store brand Chocolate Chip cookies? Do NOT buy anything at this location. Text The Lens the price for your next Clue.");
+    return false;
+  }
+  else{
+    document.forms["myForm"]["fname"].value = "";
+  	alert("Paradox2 is smarter than you. This code is incorrect.");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<center><h1 class="sansserif">Paradox2 was here.</h1>
+<p class="sansserif">Decipher the clue using Augmented Reality. Then enter the code.</p>
+<a href="https://1drv.ws/u/s!Aha5rg8v2o3kgZdkVvA2kV9UvYeDTg?e=Vo3O7y" rel="ar">
+<img src="https://developer.apple.com/design/human-interface-guidelines/ios/images/ARKit_Glyph_Button.svg" alt="Tap Here">
+</a>
+<p class="sansserif"></p>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <input type="text" pattern="[0-9]*" name="fname" placeholder= "CODE";>
+  <input type="submit" value="Submit">
+</form>
+</center>
+</body>
+</html>
